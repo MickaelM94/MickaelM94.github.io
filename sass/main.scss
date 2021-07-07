@@ -1,0 +1,25 @@
+/* ------- UTILS ------- */
+
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+
+/* ------- BASE ------- */
+
+@import "./base/reset";
+@import "./base/typography";
+
+/* ------- COMPONENTS ------ */
+
+@import "./components/buttons";
+@import "./components/loader";
+
+/* ------- LAYOUT ------- */
+
+@import "./layout/header";
+@import "./layout/footer";
+
+/* ------- PAGES ------- */
+
+@import "./pages/home";
+@import "./pages/restaurants";

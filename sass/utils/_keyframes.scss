@@ -1,0 +1,114 @@
+@keyframes overflow-hide {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 4;
+  }
+  90% {
+    opacity: 1;
+    z-index: 4;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes pages {
+  0% {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(-10vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-to-top {
+  0% {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    border-top: 4px solid $secondary;
+  }
+  66% {
+    border-top: 4px solid $tertiary;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colored-spacing {
+  0% {
+  }
+  33% {
+    color: $secondary;
+  }
+  50% {
+    letter-spacing: 1px;
+  }
+  66% {
+    color: $tertiary;
+  }
+  100% {
+    color: $primary;
+    letter-spacing: normal;
+  }
+}
+
+@keyframes heart-animated {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

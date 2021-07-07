@@ -1,0 +1,11 @@
+* {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.textLogo {
+  @include reset;
+  @include shrikhand;
+  font-size: x-large;
+  color: white;
+}

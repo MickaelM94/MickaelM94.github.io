@@ -1,0 +1,40 @@
+@mixin shrikhand {
+  font-family: "Shrikhand", cursive;
+}
+
+@mixin bg-grey {
+  background-color: $grey;
+}
+
+@mixin bg-light-grey {
+  background-color: $light-grey;
+}
+
+@mixin bg-dark {
+  background-color: $dark;
+}
+
+@mixin bg-white {
+  background-color: white;
+}
+
+@mixin bg-degraded {
+  background: linear-gradient(355deg, $primary 0%, $secondary 100%);
+}
+
+@mixin shadow {
+  box-shadow: 0px 4px 10px 1px rgba(53, 53, 53, 0.1);
+}
+
+@mixin shadow-strong {
+  box-shadow: 0px 4px 10px 1px rgba(53, 53, 53, 0.25);
+}
+
+@mixin reset {
+  margin: 0px;
+  text-decoration: none;
+}
+
+@mixin text-center {
+  text-align: center;
+}

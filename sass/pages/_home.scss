@@ -1,0 +1,240 @@
+.pageWrapper__home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  min-width: 350px;
+  animation: pages 6s ease-in-out 1 both;
+  -moz-animation: pages 6s ease-in-out 1 both;
+  -webkit-animation: pages 6s ease-in-out 1 both;
+  animation: overflow-hide 4s ease-in-out 1 both;
+  -moz-animation: overflow-hide 4s ease-in-out 1 both;
+  -webkit-animation: overflow-hide 4s ease-in-out 1 both;
+}
+
+
+.location {
+  @include bg-grey;
+  z-index: -1;
+  &__text {
+    @include reset;
+    @include text-center;
+    padding: 25px 0px;
+    font-weight: bold;
+    &Icone {
+      margin-right: 15px;
+    }
+  }
+}
+
+.cta {
+  @include bg-light-grey;
+  @include text-center;
+  padding: 40px;
+  &__title {
+    @include reset;
+    font-size: x-large;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: large;
+  }
+}
+
+.describ {
+  padding: 50px 20px;
+  &__title {
+    @include reset;
+    font-size: x-large;
+  }
+  &__list {
+    display: flex;
+    margin: 40px auto 20px auto;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  &__card {
+    @include bg-light-grey;
+    @include shadow;
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+    height: 90px;
+    border-radius: 25px;
+    transition: 0.4s;
+    &:hover {
+      background-color: lighten($primary, 35%);
+    }
+
+    p:first-child {
+      margin: auto 0px auto -12px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      font-size: medium;
+      background-color: $primary;
+      padding: 5px;
+      text-align: center;
+      color: white;
+    }
+    .describ__cardIcone {
+      width: 20px;
+      font-size: x-large;
+      margin: auto 30px;
+      transition: 0.4s;
+      &:hover {
+        color: $primary;
+      }
+    }
+    p:nth-child(3) {
+      font-weight: bold;
+      font-size: large;
+      margin: auto 0px;
+    }
+  }
+}
+
+.restaurants {
+  @include bg-light-grey;
+  padding: 40px 20px;
+  &__title {
+    @include reset;
+    font-size: x-large;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin: 20px 0px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  &__card {
+    @include shadow;
+    @include bg-white;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    &Text {
+      line-height: 24px;
+      padding: 15px;
+      *:first-child {
+        font-size: large;
+      }
+      * {
+        @include reset;
+      }
+    }
+  }
+}
+
+.new {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 4px;
+  background-color: $tertiary;
+  p {
+    margin: 0px;
+    color: $green;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: large;
+  }
+}
+
+.like {
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+  font-size: x-large;
+  cursor: pointer;
+  z-index: 2;
+  &:hover + .like--animated {
+    animation: heart-animated .5s linear 1 both;
+  }
+}
+
+.like--animated {
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+  font-size: x-large;
+  opacity: 0;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 650px) {
+  .describ {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 40px 20px 0px 20px;
+      column-gap: 20px;
+    }
+    p:first-child {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+    }
+    .describ__cardIcone {
+      display: none;
+    }
+    p:nth-child(3) {
+      text-align: center;
+      margin: auto;
+      padding: 20px;
+    }
+  }
+
+  .restaurants {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+    }
+    &__card img {
+      height: 170px;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  body {
+    background-image: url(/images/ohmyfood.png);
+    background-size: contain;
+  }
+
+  .pageWrapper__home {
+    max-width: 920px;
+    margin: auto;
+  }
+
+  .describ {
+    background-color: white;
+  }
+
+  .restaurants {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+    }
+
+    &__card img {
+      height: 140px;
+    }
+  }
+}

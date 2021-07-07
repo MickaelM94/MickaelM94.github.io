@@ -1,0 +1,31 @@
+.siteFooter {
+  @include bg-dark;
+  padding: 20px;
+  ul {
+    list-style: none;
+    margin-left: -40px;
+  }
+
+  li {
+    line-height: 28px;
+    a {
+      color: white;
+    }
+  }
+  &__icone {
+    display: inline-block;
+    width: 20px;
+    font-size: 14px;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 650px){
+  .siteFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
